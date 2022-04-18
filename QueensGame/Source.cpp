@@ -14,7 +14,7 @@ void showTab(vector<vector<bool>>& tab) {
 }
 
 
-bool checkCase(vector<vector<int>> Queen, int x, int y)
+bool Verif(vector<vector<int>> Queen, int x, int y)
 {
     if (Queen.size() == 0) {
         return true;
@@ -52,7 +52,7 @@ void BackTrack(vector<vector<bool>>& tab, int nbQueen) {
             }
             Ok = false;
             for (Vert; Vert < tab[Hori].size(); Vert++) {
-                if (checkCase(TabQueen, Hori, Vert) == true) {
+                if (Verif(TabQueen, Hori, Vert) == true) {
                     tab[Hori][Vert] = true;
                     NBY.push_back(Hori);
                     NBY.push_back(Vert);
